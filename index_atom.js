@@ -43,7 +43,7 @@ function c1() /*clear*/ {
 
 }
 
-function ce() {
+function ce() /*clear all*/ {
   a = "";
   document.getElementById("ans").innerHTML = "0";
 }

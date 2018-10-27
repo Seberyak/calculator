@@ -1,8 +1,8 @@
-var a, b, c, d;
+var request, c, d;
 var answr="answr";
-var a = "hello";
-a="";
-a.substring(0, a.length - 1);
+var request = "hello";
+request="0";
+request.substring(0, request.length - 1);
 function plus() {};
 
 function minus() {};
@@ -14,12 +14,12 @@ function dev() /*გაყოფა*/ {
 }
 
 /*function equal() {
-  for(var i=0;i<a.length;i++){
-      if(0<=a[i]<=9) continue;
-        else if(a[i]=='.'){}
-        else if (a[i]=='±') {}
-        else if (a[i]=='!') {}
-      switch(a[i]){
+  for(var i=0;i<request.length;i++){
+      if(0<=request[i]<=9) continue;
+        else if(request[i]=='.'){}
+        else if (request[i]=='±') {}
+        else if (request[i]=='!') {}
+      switch(request[i]){
         case ''
 
 
@@ -31,40 +31,63 @@ function dev() /*გაყოფა*/ {
 
   }
   document.getElementById("ans").innerHTML = answr;
-  a="";
+  request="";
 }*/
 function c1() /*clear*/ {
-   if(a.length > 1){
-      a = a.substring(0, a.length - 1);
-      document.getElementById("ans").innerHTML = a;
+   if(request.length > 1){
+      request = request.substring(0, request.length - 1);
+      document.getElementById("ans").innerHTML = request;
   }
-  else{ document.getElementById("ans").innerHTML = "0";}
-  console.log(a);
+  else{
+    request="0";
+    document.getElementById("ans").innerHTML = "0";
+    }
+    console.log(request);
 
 }
 
 function ce() /*clear all*/ {
-  a = "";
-  document.getElementById("ans").innerHTML = "0";
+  request = "0";
+  document.getElementById("ans").innerHTML = request;
+  console.log(request);
+
 }
 
 function fact() {
 
 }
 
+function dot() {
+  if(request.includes('.')==false ){
+    request+=".";
+    document.getElementById("ans").innerHTML = request;
+    console.log(request);
+}
+}
+
 function squrt() {
+if(request=="0") request="√";
+document.getElementById("ans").innerHTML = request;
 
 }
+
 function equal() {
   document.getElementById("ans").innerHTML=answr;
 }
 
 function butt(val) {
-
-
-
-
-  a+=val;
-  document.getElementById("ans").innerHTML = a;
-  console.log(a);
+  var bool=false;
+    for(var i=0;i<10;i++){
+        if(val==i){bool=true;break;
+        }
+}
+  if(request=="0" && bool==true) {
+    request=val;
+    document.getElementById("ans").innerHTML = request;
+  console.log(request+" bool="+bool);}
+  else {
+    request+=val;
+    document.getElementById("ans").innerHTML = request;
+    console.log(request+" bool="+bool);
+  }
 }

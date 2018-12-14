@@ -5,10 +5,7 @@ var answr=new String("answr");
 request="0";
 var str= "1234567890()";
 request.substring(0, request.length - 1);
-<<<<<<< HEAD
 
-=======
->>>>>>> 6ea15ca7bf7aec9942e3ab21956329cfc4abea4d
 
 var audio = new Audio();
 function playAudio() {
@@ -17,10 +14,7 @@ function playAudio() {
 }
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 6ea15ca7bf7aec9942e3ab21956329cfc4abea4d
 function c1() /*clear last element*/ {
   playAudio();
    if(request.length > 1){
@@ -52,17 +46,17 @@ setTimeout(function() { window.open("https://youtu.be/5-xhpcgBMe4?t=51");}, 2000
 
 function fact() {
   playAudio();
+  if(request.length>5) request="Infinity";
+  else{
   let a=eval(request);
   let buff=1;
   for(var i=a;i>0;i--)buff*=i;
   request=buff.toString();
-  console.log(buff);
+}
+  console.log(request);
   document.getElementById('ans').innerHTML=request;
-<<<<<<< HEAD
   if(request=="Infinity") Infinity_1() ;
 
-=======
->>>>>>> 6ea15ca7bf7aec9942e3ab21956329cfc4abea4d
 }
 
 function dot() {
@@ -91,10 +85,7 @@ function sqr(){
   a=Math.pow(a,2);
   request=a.toString();
   document.getElementById("ans").innerHTML=request;
-<<<<<<< HEAD
   if(request=="Infinity") Infinity_1() ;
-=======
->>>>>>> 6ea15ca7bf7aec9942e3ab21956329cfc4abea4d
 }
 
 function equal() {
@@ -102,10 +93,7 @@ function equal() {
   request=eval(request).toString();
   console.log(request);
   document.getElementById("ans").innerHTML=request;
-<<<<<<< HEAD
   if(request=="Infinity") Infinity_1() ;
-=======
->>>>>>> 6ea15ca7bf7aec9942e3ab21956329cfc4abea4d
 
 }
 
